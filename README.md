@@ -43,15 +43,30 @@ https://github.com/hanwckf/bl-mt798x
  git config --global user.name 'your name'
 ```
 
+运行git checkout xxx切换gl-infra-builder标签（xxx标签请参考下表），这一步的目的是切换到不同GL.iNet固件版本使用的源代码。
+ # 列出 openwrt verizon
+ ls configs -hl
+ 比如你要使用openwrt-21.02.2，运行python3 setup.py -c configs/config-21.02.2.yml下载openwrt-21.02.2源码
+ 
 ```
  python3 setup.py -c configs/config-mt798x-7.6.6.1.yml && cd mt7981
 ```
 
+ ```
+ cd work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
+ ```
+ 
+  # 增删插件（可选）
+ ./scripts/gen_config.py list获取 target_xxx 和 glinet_xxx 文件。
+ target_xxx 是你要编译的产品，不要修改。
+ glinet_xxx是你要添加/删除的包，你可以修改。配置文件目录中的那些文件。
+ 
+ 例如，如果你想编译 GL-A1300 产品并添加 luci，你可以运行./scripts/gen_config.py target_ipq40xx_gl-a1300 luci. 
+ 您可以运行make menuconfig以选择其他包
+ 运行./scripts/gen_config.py target_ipq40xx_gl-a1300 glinet_depends glinet_nas以添加 A1300 GL.iNet 包
+ 
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M luci
- # 增删插件（可选）
- make manuconfig   # 错误
- cd work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
 ```
 
 1.2 Compile 360t7-108M GL.iNet standard firmware
