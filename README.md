@@ -50,8 +50,8 @@ https://github.com/hanwckf/bl-mt798x
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M luci
  # 增删插件（可选）
- make manuconfig
- work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
+ make manuconfig   # 错误
+ cd work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
 ```
 
 1.2 Compile 360t7-108M GL.iNet standard firmware
@@ -61,7 +61,7 @@ https://github.com/hanwckf/bl-mt798x
 ```
 
 ```
- cp ./glinet4.x/pkg_config/gl_pkg_config_mt7981_mt3000.mk  ./glinet4.x/mt7981/gl_pkg_config.mk
+ cp ./glinet4.x/pkg_config/gl_pkg_config_mt3000.mk  ./glinet4.x/mt7981/gl_pkg_config.mk
 ```
 
 ```
@@ -69,7 +69,7 @@ https://github.com/hanwckf/bl-mt798x
 ```
 
 ```
- make V=s -j5 GL_PKGDIR=`pwd`/glinet4.x/mt7981/
+ make -j2 GL_PKGDIR=`pwd`/glinet4.x/mt7981/ | make -j1 V=s GL_PKGDIR=`pwd`/glinet4.x/mt7981/
 ```
 
 ## 
