@@ -38,13 +38,13 @@ https://github.com/hanwckf/bl-mt798x
 
 ```
  git clone https://github.com/FUjr/gl-infra-builder && cd gl-infra-builder
- # 如果没有git账户，务必执行
+##  如果没有git账户，务必执行
  git config --global user.email 'youremail.com'
  git config --global user.name 'your name'
 ```
 
 运行git checkout xxx切换gl-infra-builder标签（xxx标签请参考下表），这一步的目的是切换到不同GL.iNet固件版本使用的源代码。
- # 列出 openwrt verizon
+##  列出 openwrt verizon
  ls configs -hl
  比如你要使用openwrt-21.02.2，运行python3 setup.py -c configs/config-21.02.2.yml下载openwrt-21.02.2源码
  
@@ -56,7 +56,7 @@ https://github.com/hanwckf/bl-mt798x
  cd work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
  ```
  
-  # 增删插件（可选）
+##  增删插件（可选）
  ./scripts/gen_config.py list获取 target_xxx 和 glinet_xxx 文件。
  target_xxx 是你要编译的产品，不要修改。
  glinet_xxx是你要添加/删除的包，你可以修改。配置文件目录中的那些文件。
