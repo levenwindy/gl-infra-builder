@@ -39,8 +39,8 @@ https://github.com/hanwckf/bl-mt798x
 ```
  git clone https://github.com/FUjr/gl-infra-builder && cd gl-infra-builder
  # 如果没有git账户，务必执行
-git config --global user.email 'youremail.com'
-git config --global user.name 'your name'
+ git config --global user.email 'youremail.com'
+ git config --global user.name 'your name'
 ```
 
 ```
@@ -50,7 +50,8 @@ git config --global user.name 'your name'
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M luci
  # 增删插件（可选）
-make manuconfig
+ make manuconfig
+ work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
 ```
 
 1.2 Compile 360t7-108M GL.iNet standard firmware
