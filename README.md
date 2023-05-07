@@ -60,7 +60,10 @@ https://github.com/hanwckf/bl-mt798x
  ```
  
 ##  增删插件（可选）
- ./scripts/gen_config.py list获取 target_xxx 和 glinet_xxx 文件。
+
+ 获取 target_xxx 和 glinet_xxx 文件。
+ 
+ ./scripts/gen_config.py list
  
  target_xxx 是你要编译的产品，不要修改。
  
