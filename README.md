@@ -55,9 +55,7 @@ https://github.com/hanwckf/bl-mt798x
  python3 setup.py -c configs/config-mt798x-7.6.6.1.yml && cd mt7981
 ```
 
- ```
  cd work/openwrt-64/openwrt-64/gl-infra-builder/mt7981
- ```
  
 ##  增删插件（可选）
 
@@ -87,6 +85,7 @@ https://github.com/hanwckf/bl-mt798x
 
 ```
  cp ./glinet4.x/pkg_config/gl_pkg_config_mt3000.mk  ./glinet4.x/mt7981/gl_pkg_config.mk
+ cp ./glinet4.x/pkg_config/glinet_depends_mt3000.yml  ./profiles/glinet_depends.yml
 ```
 
 ```
