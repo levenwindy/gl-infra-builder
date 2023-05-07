@@ -38,18 +38,18 @@ https://github.com/hanwckf/bl-mt798x
 
 ```
  git clone https://github.com/FUjr/gl-infra-builder && cd gl-infra-builder
-##  如果没有git账户，务必执行
+##  如果没有 git 账户，务必执行
  git config --global user.email 'youremail.com'
  git config --global user.name 'your name'
 ```
 
-运行git checkout xxx切换gl-infra-builder标签（xxx标签请参考下表），这一步的目的是切换到不同GL.iNet固件版本使用的源代码。
+运行git checkout xxx切换 gl-infra-builder 标签（xxx标签请参考下表），这一步的目的是切换到不同 GL.iNet 固件版本使用的源代码。
 
 ##  列出 openwrt verizon
 
  ls configs -hl
  
- 比如你要使用openwrt-21.02.2，运行python3 setup.py -c configs/config-21.02.2.yml下载openwrt-21.02.2源码
+ 比如你要使用 openwrt-21.02.2，运行 python3 setup.py -c configs/config-21.02.2.yml 下载 openwrt-21.02.2 源码
  
 ```
  python3 setup.py -c configs/config-mt798x-7.6.6.1.yml && cd mt7981
@@ -69,11 +69,11 @@ https://github.com/hanwckf/bl-mt798x
  
  glinet_xxx是你要添加/删除的包，你可以修改。配置文件目录中的那些文件。
  
- 例如，如果你想编译 GL-A1300 产品并添加 luci，你可以运行./scripts/gen_config.py target_ipq40xx_gl-a1300 luci. 
+ 例如，如果你想编译 GL-A1300 产品并添加 luci，你可以运行 ./scripts/gen_config.py target_ipq40xx_gl-a1300 luci 
  
- 您可以运行make menuconfig以选择其他包
+ 您可以运行 make menuconfig 以选择其他包
  
- 运行./scripts/gen_config.py target_ipq40xx_gl-a1300 glinet_depends glinet_nas以添加 A1300 GL.iNet 包
+ 运行 ./scripts/gen_config.py target_ipq40xx_gl-a1300 glinet_depends glinet_nas 以添加 A1300 GL.iNet 包
  
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M luci
