@@ -96,5 +96,48 @@ https://github.com/hanwckf/bl-mt798x
  make -j2 GL_PKGDIR=`pwd`/glinet4.x/mt7981/ | make -j1 V=s GL_PKGDIR=`pwd`/glinet4.x/mt7981/
 ```
 
-## 
+## MT3000 必须 Ubuntu 20.04  22.04是未知错误
 
+```bash
+        sudo -E apt-get update
+        sudo -E apt-get -qq install build-essential libncurses5-dev gawk git libssl-dev \
+            gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml
+```
+
+```bash
+         git clone https://github.com/gl-inet/gl-infra-builder.git && cd gl-infra-builder
+         git config --global user.email 'youremail.com'
+         git config --global user.name 'name'
+```
+
+```bash
+         ls configs -hl
+```
+
+```bash
+        git checkout v4.2.0_mt3000_release1
+```
+
+```bash
+         python3 setup.py -c configs/config-mt798x-7.6.6.1.yml && cd mt7981
+```
+
+### 3. 加入自己需要的软件包
+     a. 执行完第2步之后，可以通过make menuconfig菜单选择自己的软件包
+     b. 或者直接在2步中gen_config的阶段直接加入自己的配置，具体可以参考以下俩个链接
+         https://forum.gl-inet.cn/forum.p ... &pid=2710&fromuid=1
+        https://forum.gl-inet.cn/forum.p ... id=6&extra=page%3D1
+   
+```bash
+        git clone https://github.com/gl-inet/glinet4.x.git && \
+            cp ./glinet4.x/pkg_config/gl_pkg_config_mt3000.mk  ./glinet4.x/mt7981/gl_pkg_config.mk && \
+            cp ./glinet4.x/pkg_config/glinet_depends_mt3000.yml  ./profiles/glinet_depends.yml && \
+            ./scripts/gen_config.py glinet_depends
+```
+
+```bash
+    - name: 1.2 编译 
+      run: |
+        cd gl-infra-builder/mt7981
+        make V=s -j2 GL_PKGDIR=`pwd`/glinet4.x/mt7981/
+```
