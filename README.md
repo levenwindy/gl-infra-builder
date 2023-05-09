@@ -123,10 +123,10 @@ https://github.com/hanwckf/bl-mt798x
 ```
 
 ### 3. 加入自己需要的软件包
-     a. 执行完第2步之后，可以通过make menuconfig菜单选择自己的软件包
-     b. 或者直接在2步中gen_config的阶段直接加入自己的配置，具体可以参考以下俩个链接
-         https://forum.gl-inet.cn/forum.p ... &pid=2710&fromuid=1
-        https://forum.gl-inet.cn/forum.p ... id=6&extra=page%3D1
+####   a. 执行完第2步之后，可以通过make menuconfig菜单选择自己的软件包
+####   b. 或者直接在2步中gen_config的阶段直接加入自己的配置，具体可以参考以下俩个链接
+#####    https://forum.gl-inet.cn/forum.p ... &pid=2710&fromuid=1
+#####    https://forum.gl-inet.cn/forum.p ... id=6&extra=page%3D1
    
 ```bash
         git clone https://github.com/gl-inet/glinet4.x.git && \
