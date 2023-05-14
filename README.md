@@ -88,8 +88,13 @@ https://github.com/hanwckf/bl-mt798x
  cp ./glinet4.x/pkg_config/glinet_depends_mt3000.yml  ./profiles/glinet_depends.yml
 ```
 
+*此步需要编写* profile
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M glinet_depends
+```
+# 官方步骤
+```
+ ./scripts/gen_config.py glinet_depends
 ```
 
 ```
