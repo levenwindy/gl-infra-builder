@@ -100,6 +100,8 @@ https://github.com/hanwckf/bl-mt798x
 
 ```
  make -j2 GL_PKGDIR=`pwd`/glinet4.x/mt7981/ | make -j1 V=s GL_PKGDIR=`pwd`/glinet4.x/mt7981/
+ 输出日志 1.log 报错详细 tee 2.log
+ make -j3 GL_PKGDIR=`pwd`/glinet4.x/mt7981/ |tee 1.log || make -j1 V=s GL_PKGDIR=`pwd`/glinet4.x/mt7981/ |tee 2.log
 ```
 
 ## MT3000 必须 Ubuntu 20.04  22.04是未知错误
