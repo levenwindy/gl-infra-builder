@@ -75,6 +75,8 @@ https://github.com/hanwckf/bl-mt798x
  
 ```
  ./scripts/gen_config.py target_mt7981_360t7-108M luci
+ # 可选
+ make menuconfig 
 ```
 
 1.2 Compile 360t7-108M GL.iNet standard firmware
@@ -90,10 +92,9 @@ https://github.com/hanwckf/bl-mt798x
 
 *此步需要编写* profile
 ```
+# 作者（旧）
  ./scripts/gen_config.py target_mt7981_360t7-108M glinet_depends
-```
 # 官方步骤
-```
  ./scripts/gen_config.py glinet_depends
 ```
 
